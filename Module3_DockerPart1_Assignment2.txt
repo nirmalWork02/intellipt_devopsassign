@@ -1,0 +1,18 @@
+Module 3: Docker Part 1 Assignment 2
+
+Tasks To Be Performed:
+1. Save the image created in assignment 1 as a Docker image
+2. Launch container from this new image and map the port to 81
+3. Go inside the container and start the Apache2 service
+4. Check if you are able to access it on the browser
+
+Steps:
+1. sudo docker ps - To check the running container.
+2. sudo docker commit 4b02d3e0e969 httpd1 - To save the container.
+3. sudo docker run -it -p 81:80 -d httpd1 - To run the container in 81 port.
+4. sudo docker ps - To check the running container.
+5. sudo docker exec -it 35623ecbf61d bash - To access the container and made changes inside the container.
+6. service apache2 status - To check the status of the app.
+7. service apache2 start - To start the app.
+8. Copy the Instance public IP followed by port no. EX: 52.71.105.227:81 and Hit Enter.
+9. Able to See the Welcome page.

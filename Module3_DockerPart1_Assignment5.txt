@@ -1,0 +1,33 @@
+Module 3: Docker Part 1 Assignment 5
+
+Tasks To Be Performed:
+1. Create a sample HTML file
+2. Use the Dockerfile from the previous task
+3. Replace this sample HTML file inside the Docker container with the default
+page
+
+Steps:
+
+Dockerfile Steps:
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install apache2 -y
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+
+index.html:
+<html>
+<body>
+<h1>Docker Assignment</h1>
+</body>
+</html>
+
+Docker commands:
+1. mkdir assignd4
+2. cd assignd4
+3. vi Dockerfile
+4. vi index.html
+4. docker build . -t newtest
+5. docker run -it -p 80:80 -d newtest
+6. Access the server with port no 80, apache2 default welcome page will replaced by our html.  
+Ex: 54.87.168.245:80

@@ -1,0 +1,24 @@
+Module 3: Docker Part 1 Assignment 3
+
+Tasks To Be Performed:
+1. Use the saved image in the previous assignment
+2. Upload this image on Docker Hub
+3. On a separate machine pull this Docker Hub image and launch it on port
+80
+4. Start the Apache2 service
+5. Verify if you are able to see the Apache2 service
+
+Steps:
+1.sudo docker tag httpd1 nirmalworkmail2/assignmentthree
+2.sudo docker login
+3.sudo docker push nirmalworkmail2/assignmentthree
+4.sudo docker login
+5.sudo docker pull nirmalworkmail2/assignmentthree
+6.sudo docker ps
+7.sudo docker images
+8.sudo docker pull nirmalworkmail2/assignmentthree
+9.sudo docker run -it -p 80:80 -d nirmalworkmail2/assignmentthree
+10.sudo docker ps
+11.sudo docker exec -it daf7db008dd5 bash
+12.service apache2 start
+ 

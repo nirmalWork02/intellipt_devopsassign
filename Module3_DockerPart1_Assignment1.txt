@@ -1,0 +1,20 @@
+Module 3: Docker Part 1 Assignment 1
+
+Tasks To Be Performed:
+1. Pull Ubuntu container
+2. Run this container and map port 80 on the local
+3. Install Apache2 on this container
+4. Check if you are able to access the Apache page on your browser
+
+Steps:
+1. sudo docker pull ubuntu - To download ubuntu image.
+2. sudo docker images - To check the downloaded images.
+3. sudo docker run -it -p 80:80 -d ubuntu - To run the container in 80 port.
+4. sudo docker ps - To see the running container
+5. sudo docker exec -it 4b02d3e0e969 bash - To access the container and made changes inside the container.
+6. apt-get update - updating the packages.
+7. apt-get install apache2 -y - Install the apache2 in container.
+8. service apache2 status - To check the status of the app.
+9. service apache2 start - To start the app.
+10. Copy the Instance public IP followed by port no. EX: 52.71.105.227:80 and Hit Enter.
+11. Able to See the Welcome page.

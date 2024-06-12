@@ -1,0 +1,25 @@
+Module 3: Docker Part 1 Assignment 4
+
+Tasks To Be Performed:
+1. Create a Dockerfile with the following specs:
+● Ubuntu container
+● Apache2 installed
+● Apache2 should automatically run once the container starts
+2. Submit the Dockerfile for assignment completion
+
+Steps:
+
+Dockerfile Steps:
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install apache2 -y
+ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+
+Docker commands:
+1. mkdir assignd4
+2. cd assignd4
+3. vi Dockerfile
+4. docker build . -t newtest
+5. docker run -it -p 80:80 -d newtest
+6. Access the server with port no 80, apache2 Welcome page will displays.
